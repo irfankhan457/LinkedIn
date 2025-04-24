@@ -8,12 +8,8 @@ public class DemoStream {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-        Consumer<Integer> printConsumer = new Consumer<Integer>() {
-            @Override
-            public void accept(Integer number) {
-                System.out.println(number);
-            }
-        };
+        Consumer<Integer> printConsumer = System.out::println;
+
         numbers.forEach(printConsumer);
     }
 }
